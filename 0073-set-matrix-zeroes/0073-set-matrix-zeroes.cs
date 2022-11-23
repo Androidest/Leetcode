@@ -9,8 +9,7 @@ public class Solution {
         {
             for (int j = 0; j < n; ++j)
             {
-                var val = matrix[i][j];
-                if (val == 0)
+                if (matrix[i][j] == 0)
                 {
                     r[i] = true;
                     c[j] = true;
