@@ -1,23 +1,29 @@
 public class Solution {
     public string LongestPalindrome(string s) {
-        for (int l = s.Length - 1; l >= 0; --l)
+        int max1=0, max2=0;
+        for (int i = 0; i < s.Length; ++i)
         {
-            int subStringCount = s.Length - l;
-            for (int p1 = 0; p1 < subStringCount; ++p1)
-            {
-                int p2 = p1 + l;
-                if (IsPalindromic(s, p1, p2))
-                    return s.Substring(p1, l+1);
-            }
+            int o1, o2, e1, e2, p1, p2;
+            (o1, o2) = GetPalindrome(s, i-1, i+1);
+            (e1, e2) = GetPalindrome(s, i-1, i);
+            (p1, p2)  = (o2 - o1 > e2 - e1)? (o1, o2) : (e1, e2);
+             Console.WriteLine($"{o1} {o2} {e1} {e2} {p1} {p2}");
+            (max1, max2) = (p2 - p1 > max2 - max1)? (p1, p2) : (max1, max2);
         }
-        return "";
+       
+        return s.Substring(max1, max2 - max1);
     }
     
-    public bool IsPalindromic(string s, int p1, int p2)
+    public (int, int) GetPalindrome(string s, int p1, int p2)
     {
-        while(p1 < p2)
-            if(s[p1++] != s[p2--])
-                return false;
-        return true;
+        while(0 <= p1 && p2 < s.Length)
+        {
+            if (s[p1] != s[p2])
+                break;
+            --p1;            
+            ++p2;
+        }
+            
+        return (p1 + 1, p2);
     }
 }
