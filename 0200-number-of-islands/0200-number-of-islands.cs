@@ -28,7 +28,6 @@ public class Solution {
     {
         PosQueue = new Queue<(int, int)>();
         InfectValidIsland(i, j);
-        
         while(PosQueue.Count > 0)
         {
             (i, j) = PosQueue.Dequeue();            
