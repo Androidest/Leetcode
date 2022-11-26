@@ -24,7 +24,6 @@ public class Solution {
         int nextCol = col + dir;
         if (nextCol < 0 || cols <= nextCol || dir != grid[row][nextCol])
             return -1;
-        
         return nextCol;
     }
 }
