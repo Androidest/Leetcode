@@ -16,7 +16,6 @@ public class Solution {
     {
         if (i > M || j > N) 
             return 0;
-
         if (i == M && j == N)
             return 1;
 
