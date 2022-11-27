@@ -22,7 +22,7 @@ public class Solution {
         }
 
         // find loop in graph with a snake body
-        for (int i = 0; i < numCourses; ++i)
+        for (int i = 0; i < numCourses; ++i) 
             if (CheckLoopRecursively(i))
                 return false;
         return true;
