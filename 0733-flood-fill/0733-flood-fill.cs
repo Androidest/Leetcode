@@ -4,7 +4,7 @@ public class Solution {
     int M;
     int N;
 
-    public int[][] FloodFill(int[][] image, int sr, int sc, int color) {
+    public int[][] FloodFill_2(int[][] image, int sr, int sc, int color) {
         Image = image;
         M = image.Length;
         N = image[0].Length;
@@ -14,7 +14,7 @@ public class Solution {
         return image;
     }
 
-    public int[][] FloodFill_2(int[][] image, int sr, int sc, int color) {
+    public int[][] FloodFill(int[][] image, int sr, int sc, int color) {
         Queue = new Queue<(int, int)>();
         Image = image;
         M = image.Length;
