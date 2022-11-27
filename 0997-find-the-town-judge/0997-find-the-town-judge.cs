@@ -26,7 +26,7 @@ public class Solution {
             var person = people[i];
             if (person.InTrust == n_1 && person.OutTrust == 0)
             {
-                result = i;
+                result = i; 
                 ++count;
             }
         }
