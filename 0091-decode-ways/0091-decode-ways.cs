@@ -21,7 +21,7 @@ public class Solution {
     {
         if (Memo[i] != -1)
             return Memo[i];
-
+        
         int count = 0;
         int j = i + 1; 
         if (Map.ContainsKey($"{str[i]}"))
@@ -37,7 +37,7 @@ public class Solution {
                 count += 1;
             else
                 count += GetDecodeWaysRecursively(j + 1);
-        }
+        } 
         Memo[i] = count;
         return count;
     }
