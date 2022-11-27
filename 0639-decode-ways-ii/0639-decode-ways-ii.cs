@@ -11,7 +11,7 @@ public class Solution {
             else if (isValid(s[i]))
                 memo[i] = memo[j];
             else 
-                memo[i] = 0;
+                memo[i] = 0; 
 
             if (j < s.Length)
             {
