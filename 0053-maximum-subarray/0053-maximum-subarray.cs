@@ -7,6 +7,6 @@ public class Solution {
             sum = Math.Max(num + sum, num);
             maxSum = Math.Max(maxSum, sum);
         }
-        return maxSum;
+        return maxSum; 
     }
 }
